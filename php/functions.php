@@ -1,39 +1,43 @@
 <?php
+
     require_once('config.php');
 
+    // Connect to database
     function open_database_connection() {
-        //open the connections to database
+
+        // Open connection to database
         if ($con = @mysqli_connect(SQL_HOST, SQL_USER, SQL_PASS, SQL_DB)) {
             mysqli_query($con, 'SET NAMES `utf8`');
             return $con;
-        }
-        else {
-            //set status to "Internal Server Error"
+        } else {
+            // Return error if connecting to database failed
             $GLOBALS['status'] = 500; //Internal Server Error
-            //show error
             die(json_encode(array(
-                'discription' => 'Keine Verbindung zur Datenbank möglich'
+                'description' => 'Keine Verbindung zur Datenbank möglich'
             )));
         }
     }
 
+    // Close connection to databse
     function close_database_connection($con) {
-        //close connection to database
         return mysqli_close($con);
     }
 
     function teardown() {
-        //echo bufferd output
+
+        // Echo bufferd output
         global $status;
 
         $output = ob_get_contents();
         ob_end_clean();
 
-        //return header with given status
+        // Return header with given status
         header("X-PHP-Response-Code: $status", true, $status);
         header('Content-Type: text/json');
         header('Content-Length: '.strlen($output));
 
         echo $output;
+
     }
+
 ?>

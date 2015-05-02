@@ -1,27 +1,30 @@
 <?php
-require_once("functions.php");
-require_once("init.php");
 
-//read data from post request
-$id=mysqli_real_escape_string($con, $_POST['id']);
+    require_once("functions.php");
+    require_once("init.php");
 
-//delete where id= $id
-$result = mysqli_query($con, "DELETE FROM 'supplier' WHERE id='$id'");
+    // Read data from post request
+    $id = mysqli_real_escape_string($con, $_POST['id']);
 
-if ($result) {
-            $status = 200; // OK
-            //return success information
-            echo json_encode(array(
-                'description' => 'supplier deleted'
-            ));
-        }
-        else {
-            $status = 500; // Internal Server Error
-            //return error
-            echo json_encode(array(
-                'name' => 'SQL Error',
-                'code' => '0002',
-                'description' => 'supplier could not be deleted'
-            ));
-        }
+    // Delete data where id = $id
+    $result = mysqli_query(
+        $con, "DELETE FROM  supplier
+               WHERE        id='$id'
+    ");
+
+    // Send back process result
+    if ($result) {
+        $status = 200; // Ok
+        echo json_encode(array(
+            'description' => 'supplier deleted'
+        ));
+    } else {
+        $status = 500; // Internal Server Error
+        echo json_encode(array(
+            'name' => 'SQL Error',
+            'code' => '0002',
+            'description' => 'supplier could not be deleted'
+        ));
+    }
+
 ?>
