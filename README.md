@@ -2,14 +2,16 @@
 
 Die Software “Grossmarkt” soll für den Gemüsehändler “Zitrus” die Verwaltung und Organisation aller sich im Bestand befindlichen Produkte sowie Stammdaten übernehmen, mit dem Ziel, tägliche Arbeitsprozesse transparenter und effizienter zu gestalten.
 
+Alle geforderten Implementierungen funktionieren in dieser Softwareversion einwandfrei.
+
 *Entwickler: Dominique Müller, Johannes Hubert, Georg März*
 
 ---
 
 # Datenbank-Konfiguration
 
-Im Ordner "php" befindet sich die Datei "config.php".
-Innerhalb dieser Datei lassen sich die Zugriffseinstellungen der MySQL Datenbank konfigurieren.
+Im Ordner `php` befindet sich die Datei `config.php`. Innerhalb dieser Datei lassen sich die Zugriffseinstellungen auf die MySQL-Datenbank konfigurieren.
+Ein aktueller Dump der MySQL-Datenbank befindet sich in der Datei `grossmarkt_dump.sql`.
 
 * `"SQL_HOST"` definiert die Adresse des Servers
 * `"SQL_USER"` definiert den Benutzernamen der MySQL-Datenbank

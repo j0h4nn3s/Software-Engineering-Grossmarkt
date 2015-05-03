@@ -1,5 +1,9 @@
 <?php
 
+    /**
+     * Returns all products from the products database table
+     */
+
     require_once("functions.php");
     require_once("init.php");
 

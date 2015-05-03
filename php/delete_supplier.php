@@ -1,5 +1,9 @@
 <?php
 
+    /**
+     * Deletes a supplier selected by id in the suppliers database table
+     */
+
     require_once("functions.php");
     require_once("init.php");
 

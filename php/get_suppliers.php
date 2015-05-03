@@ -1,5 +1,9 @@
 <?php
 
+    /**
+     * Returns all suppliers from the supplier database table
+     */
+
     require_once("functions.php");
     require_once("init.php");
 

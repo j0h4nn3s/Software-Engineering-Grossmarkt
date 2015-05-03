@@ -1,5 +1,9 @@
 <?php
 
+    /**
+     * Updates a producer selected by id in the producers database table
+     */
+
     require_once("functions.php");
     require_once("init.php");
 

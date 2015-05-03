@@ -1,5 +1,9 @@
 <?php
 
+    /**
+     * Creates a new supplier in the suppliers database table
+     */
+
     require_once("functions.php");
     require_once("init.php");
 

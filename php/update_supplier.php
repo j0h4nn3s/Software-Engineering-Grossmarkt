@@ -1,5 +1,9 @@
 <?php
 
+    /**
+     * Updates a supplier selected by id in the supplier database table
+     */
+
     require_once("functions.php");
     require_once("init.php");
 

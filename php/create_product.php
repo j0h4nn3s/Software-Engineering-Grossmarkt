@@ -1,5 +1,9 @@
 <?php
 
+    /**
+     * Creates a new product in the products database table
+     */
+
     require_once("functions.php");
     require_once("init.php");
 

@@ -1,5 +1,9 @@
 <?php
 
+    /**
+     * Creates a new producer in the producers database table
+     */
+
     require_once("functions.php");
     require_once("init.php");
 

@@ -48,6 +48,7 @@ h2 {
 a {
 	color: inherit;
 	text-decoration: none;
+	cursor: pointer;
 }
 
 ul {
@@ -86,9 +87,13 @@ ul {
 }
 
 .btn:hover,
-.btn:focus,
+.btn:focus {
+	opacity: .9;
+}
+
 .btn:active {
-	opacity: .85;
+	opacity: .5;
+	transition: opacity .1s ease-in-out;
 }
 
 .btn-grey {
@@ -105,7 +110,7 @@ ul {
 
 
 
-/* --- Overall Page structure --- */
+/* --- Basic Page structure --- */
 
 #container {
 	position: absolute;
@@ -197,6 +202,7 @@ ul {
 }
 
 .navbar-main-element:hover:after,
+.navbar-main-element:focus:after,
 .navbar-main-element.active:after {
 	-webkit-transform: translateY(-3px);
 	        transform: translateY(-3px);
@@ -269,12 +275,20 @@ ul {
 .navbar-user-dropdown-element {
 	display: block;
 	padding: 9px 12px;
-	transition: background-color .15s ease-in-out;
+	transition: background-color .15s ease-in-out,
+				color .15s ease-in-out;
 }
 
 .navbar-user-dropdown-element:hover,
 .navbar-user-dropdown-element:focus {
 	background-color: #EEE;
+}
+
+.navbar-user-dropdown-element:active {
+	background-color: #777;
+	color: #FFF;
+	transition: background-color .1s ease-in-out,
+				color .1s ease-in-out;
 }
 
 .navbar-user-dropdown-divider {
@@ -607,6 +621,11 @@ ul {
 .start-nav-box > a:hover,
 .start-nav-box > a:focus {
 	opacity: .9;
+}
+
+.start-nav-box > a:active {
+	opacity: .5;
+	transition: opacity .1s ease-in-out;
 }
 
 #start-nav-box-products {

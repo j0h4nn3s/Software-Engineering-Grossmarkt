@@ -1,5 +1,9 @@
 <?php
 
+    /**
+     * Returns all categories from the categories database table
+     */
+
     require_once("functions.php");
     require_once("init.php");
 

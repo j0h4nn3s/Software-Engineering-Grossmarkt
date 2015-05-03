@@ -1,5 +1,9 @@
 <?php
 
+    /**
+     * Deletes a product selected by id in the products database table
+     */
+
     require_once("functions.php");
     require_once("init.php");
 

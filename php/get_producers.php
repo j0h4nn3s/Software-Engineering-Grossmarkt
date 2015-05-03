@@ -1,5 +1,9 @@
 <?php
 
+    /**
+     * Returns all producers from the producers database table
+     */
+
     require_once("functions.php");
     require_once("init.php");
 
