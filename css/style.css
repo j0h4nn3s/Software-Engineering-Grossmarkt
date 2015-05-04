@@ -731,3 +731,42 @@ ul {
 	margin-top: 0;
 	font-size: 15px;
 }
+
+
+
+/* --- Design fix for smaller screens --- */
+
+@media screen and (max-width: 1024px) {
+    
+	/* Wider content width */
+
+	#main {
+		width: 90%;
+		margin-right: 5%;
+		margin-left: 5%;
+	}
+
+	#navbar-main {
+		margin-left: 5%;
+	}
+
+	#navbar-user {
+		margin-right: 5%;
+	}
+
+	/* Smaller start screen boxes */
+
+	.start-nav-box {
+		height: 140px;
+	}
+
+	.start-nav-box > a {
+		padding-top: 32px;
+	}
+
+	.start-nav-box > a > img {
+		width: 48px;
+		height: 48px;
+	}
+
+}
