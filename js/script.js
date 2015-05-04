@@ -67,8 +67,8 @@ function ajax(type, object, data, callback) {
 
 
 	// Set ajax information
-	var method = (type == 'GET') ? 'GET' : 'POST';
-	xhr.open(method, 'php/' + type + '_' + object + '.php');
+	var method = (type == 'GET') ? 'get' : 'post';
+	xhr.open(method, '/php/' + type + '_' + object + '.php');
 
 	// Wait on server response
 	xhr.onreadystatechange = function() {
